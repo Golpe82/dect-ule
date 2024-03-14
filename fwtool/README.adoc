@@ -1,0 +1,206 @@
+= fwtool: User Manual
+Modify the firmware configuration of CMBS/CMND devices.
+:doctype: article
+:icons: font
+:sectnums:
+:toc:
+
+== Device selection
+
+By default, the application will try to autodetect connected devices.
+
+Autodetection will not work if more than one target device is connected to the computer. When autodetection cannot be used, use `fwtool list` to display all connected devices:
+
+```
+$ fwtool list
+COM12:cmbs
+COM13:cmnd
+Found 2 device(s)
+```
+
+By using the `--dev` option it is possible to specify which target device to use, for example:
+
+```
+$ fwtool --dev COM12:cmbs region eu
+```
+
+The above command will configure the `CMND` device connected via COM12 for the `eu` region.
+
+It is also possible to just specify a serial device/com port by its own, and the application will try to autodetect the connected device type:
+
+```
+$ fwtool --dev COM12 region eu
+```
+
+NOTE:  When specifying both device name and device type in the form of `<devname>:<devtype>`, autodetection is completely disabled. The application will just try to connect via the specified serial device/com port and will assume the given device type (`cmbs` or `cmnd`). This is useful for configuring target devices connected directly to a serial port or target devices connected via an external UART to USB converter.
+
+== Region
+
+Configure the target device for a specific earth region.
+
+```
+fwtool region <REGION>
+```
+
+Supported `REGION` codes:
+
+* `eu`: Europe
+* `us`: America
+* `jp`: Japan
+* `kr`: Korea
+
+WARNING: After changing a parameter in a CMND device, the base association information in the device is erased. The device has to be registered to the base again.
+
+=== Examples
+
+List all supported regions:
+
+```
+$ fwtool regions --list
+Supported regions:
+  eu
+  us
+  jp
+  kr
+```
+
+Configure the target device for the `eu` region:
+
+```
+$ fwtool --dev COM13 region eu
+Configured target device for region 'eu'.
+```
+
+== Parameters
+
+Configure firmware parameters.
+
+```
+fwtool param [OPTIONS] <NAME> [VALUE]
+```
+
+The supported parameters depend on the connected target. The names
+of all supported parameters can be retrieved via `fwtool param --list`.
+
+Specifying only the `NAME` argument will read and print the parameter's value.
+
+Specifying both `NAME` and `VALUE` argument will set the parameter to the new value.
+
+WARNING: After changing a parameter in a CMND device, the base association information in the device is erased. The device has to be registered to the base again.
+
+=== Examples
+
+List all available parameters:
+
+```
+$ fwtool param --list
+keep_alive
+minimum_sleep_time
+```
+
+Read the keep_alive parameter with a CMND target device connected:
+
+```
+$ fwtool param keep_alive
+900000
+```
+
+Set the keep_alive parameter with a CMND target device connected:
+
+```
+$ fwtool param keep_alive 600000
+Updated parameter 'keep_alive'.
+Pairing information with the base has been deleted!
+Please re-register your device.
+```
+
+== EEPROM
+
+Read from and write to EEPROM.
+
+```
+fwtool eeprom <RANGE> [BYTES]...
+```
+
+The `RANGE` argument here can either be single integer value for offset, or it can be two integer values seperated by a plus sign (`+`), where the first denotes the offset and the second the length.
+
+The `BYTES` arguments are expected in hexadecimal notation, the `0x` prefix is optional.
+
+Specifying only the `RANGE`, will read requested number of bytes from the specified offset and will print them.
+
+Specifying both `RANGE` and `BYTES` will write the number of specified bytes starting at the range offset. If a length value is provided as part of the range argument, the number of specified `BYTES` arguments has to match.
+
+=== Examples
+
+Read one byte from offset 0x100 with return value 0x00:
+
+```
+$ fwtool eeprom 0x100
+00
+```
+
+Read 32 bytes from offset 256:
+
+```
+$ fwtool eeprom 256+32
+00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f
+10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f
+```
+
+Write value 0x22 to offset 0x123, and write value 0x33 to offset 0x124:
+
+```
+$ fwtool eeprom 0x123 0x22 0x33
+Wrote 2 byte(s) to offset 0x00000123.
+```
+
+Write 8 bytes starting at offset 0x400:
+
+```
+$ fwtool eeprom 0x400+8 00 01 02 03 04 05 06 07
+Wrote 8 byte(s) to offset 0x00000400.
+```
+
+== Presets
+
+Apply presets.
+
+```
+fwtool preset <NAME/ID>
+```
+
+The names of all supported presets can be obtained via `fwtool preset --list`.
+
+Setting a preset can either be done by specifying a preset `NAME` or `ID`.
+
+=== Examples
+
+List all available presets:
+
+```
+$ fwtool preset --list
+Supported presets:
+  cr_local
+  cr_cmnd
+  ac
+  smoke_uart
+  smoke
+  ...
+  expansion_board
+```
+
+Apply a preset (in this, the `expansion_board` preset) by name:
+
+```
+$ fwtool preset expansion_board
+Pairing information with the base has been deleted!
+Please re-register your device.
+```
+
+Apply a preset by id:
+
+```
+$ fwtool preset 0x15
+Pairing information with the base has been deleted!
+Please re-register your device.
+```

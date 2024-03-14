@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SnomIPPhoneMenu>
+<Title>Dimmable Colour Bulb:1</Title>
+<MenuItem>
+<Name>On/Off</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_512.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Colour Control Interface</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Level Control</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_513.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>back</Name>
+<URL>http://10.110.10.154:8881/miniULE/ULE_devices.xml</URL>
+</MenuItem>
+</SnomIPPhoneMenu>

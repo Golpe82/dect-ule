@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SnomIPPhoneMenu>
+<Title>Simple Button</Title>
+<MenuItem>
+<Name>back</Name>
+<URL>http://10.110.10.154:8881/miniULE/5.xml</URL>
+</MenuItem>
+</SnomIPPhoneMenu>

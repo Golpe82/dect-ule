@@ -1,0 +1,194 @@
+{% include 'header.tpl' %}
+{% set header = data[0] %}
+{% set list_tuple = data[1] %}
+
+<div style="margin:3em;text-align:center">
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4">
+        <h1 class="display-4">{{ header['IName']}} Interface</h1>
+        <p class="lead">{{ _('Select your command from device') }} {{ header['DeviceID']}}:{{ header['UnitProfile']}}</p>
+    </div>
+
+    <div style="margin:1em;text-align:center">
+
+        {% for i in list_tuple %}
+        {% set cmdname = i[0] %}
+        {% set cmdnumber = i[1] %}
+        {% set url = i[2] %}
+        {% if url == 'NOINTERFACE' %}
+        {% set buttonactive = 'disabled' %}
+        {% else %}
+        {% set buttonactive = '' %} 
+        {% endif %}
+
+        <div class="container" style="width: 100%; text-align: left">
+            <div>
+                <a {{buttonactive}} href="{{url}}" class="btn btn-primary btn-xlarge btn-block" id="load{{loop.index0}}"
+                    data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> transmitting...">
+                    <span style="float:left;" class="badge">CMD Id:{{cmdnumber}}</span>
+                    &nbsp;{{cmdname}}
+                    <span style="float:right;" class="bi-nintendo-switch"></span>
+                </a>
+            </div>
+            <div>
+                {# <h5 class="badge" style="margin-top: 0; margin-bottom: 10;">{{url}}</h4> #}
+
+
+                    <div class="container" style="width: 100%; padding-right: 0px; padding-left: 0px; text-align: center;">
+                        <div class="input-group" style="width: 100%;  margin-top: 0px; margin-bottom: 10px;">
+                            <span class="input-group-addon  linkname" style="float: left; width: 100px;">
+                                <strong>Action URL</strong>
+                            </span>
+                            <span id="copyButton{{loop.index0}}" class="input-group-addon btn" style="width: 40px; float: left;" title="Click to copy">
+                                <i class="fa fa-clipboard" aria-hidden="true"></i>
+                            </span>
+                            <input style="font-size: 11px; float: right; height: 95%; width: 75%;" type="text" id="copyTarget{{loop.index0}}" class="form-control" value="{{url}}">
+                            {# <span class="copied">Copied !</span> #}
+                        </div>
+                    </div>
+
+                    <script>
+                        (function () {
+                            "use strict";
+
+                            function copyToClipboard(elem) {
+                                var target = elem;
+
+                                // select the content
+                                var currentFocus = document.activeElement;
+
+                                target.focus();
+                                target.setSelectionRange(0, target.value.length);
+
+                                // copy the selection
+                                var succeed;
+
+                                try {
+                                    succeed = document.execCommand("copy");
+                                } catch (e) {
+                                    console.warn(e);
+
+                                    succeed = false;
+                                }
+
+                                // Restore original focus
+                                if (currentFocus && typeof currentFocus.focus === "function") {
+                                    currentFocus.focus();
+                                }
+
+                                if (succeed) {
+                                    $(".copied").animate({ top: -25, opacity: 0 }, 700, function () {
+                                        $(this).css({ top: 0, opacity: 1 });
+                                    });
+                                }
+
+                                return succeed;
+                            }
+
+                            $("#copyButton{{loop.index0}}, #copyTarget{{loop.index0}}").on("click", function () {
+                                copyToClipboard(document.getElementById("copyTarget{{loop.index0}}"));
+                            });
+                        })();
+                    </script>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <a id="backbutton" href="{{ header['BackUrl']}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Back to Interface</a>
+
+</div>
+
+<script type="text/javascript">
+  function reply_click(clicked_id)
+  {
+      alert("2kki");
+      alert(clicked_id);
+  }
+</script>
+
+<script>
+    $('.btn').on('click', function (event) {
+        var url = "";
+        url = $(this).attr('href');
+        if (url.includes("snom_ule_cmd")) {
+            //alert("includes");
+            event.preventDefault();
+        } 
+        var $this = $(this);
+        $this.button('loading');
+        
+        $.ajax({
+            url : url,
+            type: "GET",
+            success: function () {
+                    
+                // This here will print the
+                // retrieved json on the console.
+                console.log("OK");
+            },
+            error: function () {
+                console.log("Something went wrong");
+            },
+            completed: function () {
+                console.log("Something went good");
+            },
+        });
+
+        setTimeout(function () {
+            $this.button('reset');
+        }, 2000);
+    });
+</script>
+
+
+<style>
+    .input-group {
+        margin-top: 30px;
+        position: relative;
+    }
+
+    .input-group {
+        position: relative;
+    }
+
+    .input-group-addon {
+        border: none;
+    }
+
+    .linkname {
+        display: none;
+    }
+
+    #copyButton {
+        cursor: pointer;
+        background: #f1bb3a;
+    }
+
+    #copyTarget {
+        border-left: none;
+    }
+
+    .copied {
+        opacity: 1;
+        position: absolute;
+        left: 55px;
+    }
+
+    @media (min-width: 300px) {
+        .copied {
+            left: 135px;
+        }
+
+        .linkname {
+            display: block;
+            background: #3b3e45;
+            color: #fff;
+        }
+    }
+</style>
+
+</body>
+
+</html>

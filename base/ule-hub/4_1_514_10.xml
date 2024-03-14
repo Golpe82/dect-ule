@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SnomIPPhoneMenu>
+<Title>StepXY</Title>
+<MenuItem>
+<Name>X Step Size +Sign</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_10_0.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Y Step Size +Sign</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_10_1.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Transition Time 100ms</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_10_2.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>back</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514.xml</URL>
+</MenuItem>
+</SnomIPPhoneMenu>

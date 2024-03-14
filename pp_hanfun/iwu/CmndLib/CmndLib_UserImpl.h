@@ -1,0 +1,28 @@
+/*
+ * Copyright (c) 2016-2018 DSP Group, Inc.
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+///////////////////////////////////////////////////////////////////////////////
+///
+///	All functions at this file must be implemented by user
+///
+///////////////////////////////////////////////////////////////////////////////
+
+#ifndef _CMNDLIB_USER_IMPL_H
+#define _CMNDLIB_USER_IMPL_H
+
+#include "TypeDefs.h"
+
+/// @brief Define value for infinite timeout waiting
+#define CMNDLIB_TIMEOUT_INFINITE		(0xffffffffu)
+
+///////////////////////////////////////////////////////////////////////////////
+/// Get current tick count
+///
+/// @return     tick count in milliseconds
+///////////////////////////////////////////////////////////////////////////////
+u64 p_CmndLib_UserImpl_GetTickCountMs(void);
+
+#endif // _CMNDLIB_USER_IMPL_H

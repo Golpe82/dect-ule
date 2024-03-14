@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SnomIPPhoneMenu>
+<Title>MoveToHueAndSaturation</Title>
+<MenuItem>
+<Name>Hue 0-359</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_7_0.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Saturation</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_7_1.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Direction</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_7_2.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Direction Up                = 0x01</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_7_3.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Direction Down              = 0x02</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_7_4.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Direction Shortest Distance = 0x03</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_7_5.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Direction Longest Distance  = 0x04</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_7_6.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Transition Time 100ms</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_7_7.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>back</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514.xml</URL>
+</MenuItem>
+</SnomIPPhoneMenu>

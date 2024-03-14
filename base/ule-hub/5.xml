@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SnomIPPhoneMenu>
+<Title>Simple OnOff Switchable:1</Title>
+<MenuItem>
+<Name>On/Off</Name>
+<URL>http://10.110.10.154:8881/miniULE/5_1_512.xml</URL>
+</MenuItem>
+<Title>Simple OnOff Switchable:2</Title>
+<MenuItem>
+<Name>On/Off</Name>
+<URL>http://10.110.10.154:8881/miniULE/5_2_512.xml</URL>
+</MenuItem>
+<Title>Simple Button:3</Title>
+<Title>Simple Button:4</Title>
+<MenuItem>
+<Name>back</Name>
+<URL>http://10.110.10.154:8881/miniULE/ULE_devices.xml</URL>
+</MenuItem>
+</SnomIPPhoneMenu>

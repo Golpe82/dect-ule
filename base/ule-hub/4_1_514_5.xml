@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SnomIPPhoneMenu>
+<Title>MoveSaturation</Title>
+<MenuItem>
+<Name>Direction</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_5_0.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Direction Up    = 0x01</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_5_1.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Direction Down  = 0x02</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_5_2.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>Rate steps/s</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514_5_3.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>back</Name>
+<URL>http://10.110.10.154:8881/miniULE/4_1_514.xml</URL>
+</MenuItem>
+</SnomIPPhoneMenu>

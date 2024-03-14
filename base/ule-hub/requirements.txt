@@ -1,0 +1,10 @@
+Beaker
+bottle
+bottle_utils
+bottle_utils_common
+gevent
+paho_mqtt
+prompt_toolkit
+pylama
+requests
+schedule

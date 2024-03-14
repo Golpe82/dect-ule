@@ -1,0 +1,385 @@
+DSP Group-Logfile
+Log started at: 23-12-2022  19:56
+Version 04.12 - Build 517
+
+23-12-2022  19:56:42:826
+Host ---> Target:   00 00 00 00 00 00
+{CMBS_CMD_HELLO(65281)}
+
+23-12-2022  19:56:42:828
+Target ---> Host:   0D 00 00 00 02 FF 05 00 31 41 09 04 00
+{CMBS_CMD_HELLO_RPLY(65282)}
+
+23-12-2022  19:56:43:827
+Host ---> Target:   04 00 00 00 01
+{CMBS_CMD_CAPABILITIES(65290)}
+
+23-12-2022  19:56:43:828
+Target ---> Host:   0D 00 00 00 0B FF 05 00 04 00 00 00 01
+{CMBS_CMD_CAPABILITIES_RPLY(65291)}
+
+23-12-2022  19:56:45:076
+Host ---> Target:   12 00 06 00 00 01 02 FF 03 03
+{CMBS_EV_DSR_LINE_SETTINGS_LIST_SET(39)}
+  <CMBS_IE_LINE_SETTINGS_LIST(18)>:
+    LineId = 0 
+    Attached HS mask = 0x3FF 
+    Call Intrusion = 1 Multiple Calls = 2    
+Line Type =    VOIP_PARALLEL_CALL    
+
+23-12-2022  19:56:45:079
+Target ---> Host:   13 00 00 00 28 00 0B 00 16 00 01 00 00 00 0F 02 00 77 71
+{CMBS_EV_DSR_LINE_SETTINGS_LIST_SET_RES(40)}
+  <CMBS_IE_RESPONSE(22)>:
+    Response: OK    
+
+23-12-2022  19:56:45:098
+Host ---> Target:  
+ {CMBS_EV_DSR_HW_VERSION_GET(147)}
+
+23-12-2022  19:56:45:104
+Target ---> Host:   25 00 00 00 94 00 1D 00 40 00 04 00 03 00 00 01 8D 00 06 00 FF FF FF FF 00 05 16 00 01 00 00 00 0F 02 00 7B 8C
+{CMBS_EV_DSR_HW_VERSION_GET_RES(148)}
+  <CMBS_IE_HW_VERSION(64)>:
+    CMBS Module
+    HW Chip Type = CMBS_HW_CHIP_DCX81
+    HW Com Type = CMBS_HW_COM_TYPE_USB
+    HW Chip Version = CMBS_HW_CHIP_VERSION_C
+    
+  <CMBS_IE_PRODUCT_ID(141)>:
+    Product ID: ÿÿÿÿ
+    
+  <CMBS_IE_RESPONSE(22)>:
+    Response: OK    
+
+23-12-2022  19:56:45:187
+Host ---> Target:   10 00 04 00 3E 00 00 00
+{CMBS_EV_DSR_PARAM_GET(13)}
+  <CMBS_IE_PARAMETER(16)>:
+    Max CMBS tarnsfer size    
+
+23-12-2022  19:56:45:189
+Target ---> Host:   1D 00 00 00 0E 00 15 00 10 00 06 00 3E 00 02 00 00 02 16 00 01 00 00 00 0F 02 00 15 7B
+{CMBS_EV_DSR_PARAM_GET_RES(14)}
+  <CMBS_IE_PARAMETER(16)>:
+    Max CMBS tarnsfer size    :     00     02     
+  <CMBS_IE_RESPONSE(22)>:
+    Response: OK    
+
+23-12-2022  19:56:45:209
+Host ---> Target:  
+ {CMBS_EV_DSR_SYS_START(25)}
+
+23-12-2022  19:56:45:210
+Target ---> Host:   13 00 00 00 1A 00 0B 00 16 00 01 00 00 00 0F 02 00 77 71
+{CMBS_EV_DSR_SYS_START_RES(26)}
+  <CMBS_IE_RESPONSE(22)>:
+    Response: OK    
+
+23-12-2022  19:56:45:231
+Host ---> Target:   06 30 01 00 00
+{CMBS_EV_DSR_HAN_MNGR_INIT(12288)}
+  <CMBS_IE_HAN_CFG(12294)>:
+    Device Mngr Int
+    Bind Mngr Int
+    Bind Lookup Int
+    Group Mngr Int
+    Group Lookup Int
+    Relay Mode Disabled
+    Raw Mode Disabled
+    HAN SSN Host Store Mode Disabled
+    
+
+23-12-2022  19:56:45:332
+Host ---> Target:   0A 30 03 00 02 FF FF
+{CMBS_EV_DSR_HAN_MSG_RECV_REGISTER(12304)}
+  <CMBS_IE_HAN_MSG_REG_INFO(12298)>:
+    Unit id: 2,  Inteface Id: 65535     
+
+23-12-2022  19:56:45:353
+Host ---> Target:   4E 00 04 00 37 04 00 00 4F 00 04 00 00 00 00 00 20 00 02 00 00 00
+{CMBS_EV_DSR_SUOTA_REG_CPLANE_CB(215)}
+  <CMBS_IE_SUOTA_APP_ID(78)>:
+    SUOTA App Id = 0x437
+    
+  <CMBS_IE_SUOTA_SESSION_ID(79)>:
+    SUOTA Session Id = 0x0
+    
+  <CMBS_IE_DATA(32)>:
+    Length:0
+    
+
+23-12-2022  19:56:45:374
+Host ---> Target:   4E 00 04 00 37 04 00 00 4F 00 04 00 00 00 00 00 20 00 06 00 04 00 00 00 00 00
+{CMBS_EV_DSR_SUOTA_REG_APP_CB(217)}
+  <CMBS_IE_SUOTA_APP_ID(78)>:
+    SUOTA App Id = 0x437
+    
+  <CMBS_IE_SUOTA_SESSION_ID(79)>:
+    SUOTA Session Id = 0x0
+    
+  <CMBS_IE_DATA(32)>:
+    Length:4
+     00     00     00     00    
+
+23-12-2022  19:56:45:375
+Target ---> Host:   19 00 00 00 01 30 11 00 13 30 02 00 01 02 16 00 01 00 00 00 0F 02 00 56 4A
+{CMBS_EV_DSR_HAN_MNGR_INIT_RES(12289)}
+  <CMBS_IE_HAN_BASE_INFO(12307)>:
+    ULE app protocol Id: ULE HAN-FUN Protocol Version 1
+    ULE app protocol version: FUN version 1.4    
+  <CMBS_IE_RESPONSE(22)>:
+    Response: OK    
+
+23-12-2022  19:56:45:375
+Target ---> Host:   13 00 00 00 11 30 0B 00 16 00 01 00 00 00 0F 02 00 77 71
+{CMBS_EV_DSR_HAN_MSG_RECV_REGISTER_RES(12305)}
+  <CMBS_IE_RESPONSE(22)>:
+    Response: OK    
+
+23-12-2022  19:57:03:832
+Target ---> Host:   28 00 00 00 16 30 20 00 00 30 11 00 09 00 00 00 00 02 00 00 00 21 01 00 15 01 01 00 00 35 30 01 00 A0 00 0F 02 00 2F 44
+{CMBS_EV_DSR_HAN_MSG_RECV(12310)}
+  <CMBS_IE_HAN_MSG(12288)>:
+    Src: (type = 0, dev_id = 9, un_id = 0)
+    Dst: (type = 0, dev_id = 0, un_id = 2)
+    Transport : 0
+    Msg Sequence : 33, Message Type : 1
+    IF Type : 0, IF Id : 0x115, IF Member : 1 
+    Data Len: 0
+    
+  <CMBS_IE_HAN_MSG_RSSI(12341)>:
+    RSSI: 0xa0    
+
+23-12-2022  19:57:45:231
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  19:57:45:233
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  19:58:09:122
+Target ---> Host:   30 00 00 00 16 30 28 00 00 30 19 00 05 00 00 00 00 02 00 00 00 00 01 00 06 00 01 08 00 01 02 83 01 01 01 08 F3 35 30 01 00 D8 00 0F 02 00 32 A8
+{CMBS_EV_DSR_HAN_MSG_RECV(12310)}
+  <CMBS_IE_HAN_MSG(12288)>:
+    Src: (type = 0, dev_id = 5, un_id = 0)
+    Dst: (type = 0, dev_id = 0, un_id = 2)
+    Transport : 0
+    Msg Sequence : 0, Message Type : 1
+    IF Type : 0, IF Id : 0x6, IF Member : 1 
+    Data Len: 8
+     1     2     131     1     1     1     8     243    
+  <CMBS_IE_HAN_MSG_RSSI(12341)>:
+    RSSI: 0xd8    
+
+23-12-2022  19:58:55:252
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  19:58:55:254
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  19:59:35:274
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  19:59:35:275
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  20:00:10:503
+Target ---> Host:   30 00 00 00 16 30 28 00 00 30 19 00 05 00 00 00 00 02 00 00 00 00 01 00 06 00 01 08 00 01 02 83 01 01 01 08 F3 35 30 01 00 D8 00 0F 02 00 32 A8
+{CMBS_EV_DSR_HAN_MSG_RECV(12310)}
+  <CMBS_IE_HAN_MSG(12288)>:
+    Src: (type = 0, dev_id = 5, un_id = 0)
+    Dst: (type = 0, dev_id = 0, un_id = 2)
+    Transport : 0
+    Msg Sequence : 0, Message Type : 1
+    IF Type : 0, IF Id : 0x6, IF Member : 1 
+    Data Len: 8
+     1     2     131     1     1     1     8     243    
+  <CMBS_IE_HAN_MSG_RSSI(12341)>:
+    RSSI: 0xd8    
+
+23-12-2022  20:00:45:295
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  20:00:45:297
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  20:01:25:316
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  20:01:25:318
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  20:02:05:338
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  20:02:05:339
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  20:02:11:895
+Target ---> Host:   30 00 00 00 16 30 28 00 00 30 19 00 05 00 00 00 00 02 00 00 00 00 01 00 06 00 01 08 00 01 02 83 01 01 01 08 F3 35 30 01 00 D8 00 0F 02 00 32 A8
+{CMBS_EV_DSR_HAN_MSG_RECV(12310)}
+  <CMBS_IE_HAN_MSG(12288)>:
+    Src: (type = 0, dev_id = 5, un_id = 0)
+    Dst: (type = 0, dev_id = 0, un_id = 2)
+    Transport : 0
+    Msg Sequence : 0, Message Type : 1
+    IF Type : 0, IF Id : 0x6, IF Member : 1 
+    Data Len: 8
+     1     2     131     1     1     1     8     243    
+  <CMBS_IE_HAN_MSG_RSSI(12341)>:
+    RSSI: 0xd8    
+
+23-12-2022  20:02:45:359
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  20:02:45:360
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  20:03:25:380
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  20:03:25:381
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  20:04:05:401
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  20:04:05:402
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  20:04:13:262
+Target ---> Host:   30 00 00 00 16 30 28 00 00 30 19 00 05 00 00 00 00 02 00 00 00 00 01 00 06 00 01 08 00 01 02 83 01 01 01 08 F3 35 30 01 00 D8 00 0F 02 00 32 A8
+{CMBS_EV_DSR_HAN_MSG_RECV(12310)}
+  <CMBS_IE_HAN_MSG(12288)>:
+    Src: (type = 0, dev_id = 5, un_id = 0)
+    Dst: (type = 0, dev_id = 0, un_id = 2)
+    Transport : 0
+    Msg Sequence : 0, Message Type : 1
+    IF Type : 0, IF Id : 0x6, IF Member : 1 
+    Data Len: 8
+     1     2     131     1     1     1     8     243    
+  <CMBS_IE_HAN_MSG_RSSI(12341)>:
+    RSSI: 0xd8    
+
+23-12-2022  20:04:32:556
+Target ---> Host:   28 00 00 00 16 30 20 00 00 30 11 00 03 00 00 00 00 02 00 00 00 00 01 00 15 01 01 00 00 35 30 01 00 D8 00 0F 02 00 19 49
+{CMBS_EV_DSR_HAN_MSG_RECV(12310)}
+  <CMBS_IE_HAN_MSG(12288)>:
+    Src: (type = 0, dev_id = 3, un_id = 0)
+    Dst: (type = 0, dev_id = 0, un_id = 2)
+    Transport : 0
+    Msg Sequence : 0, Message Type : 1
+    IF Type : 0, IF Id : 0x115, IF Member : 1 
+    Data Len: 0
+    
+  <CMBS_IE_HAN_MSG_RSSI(12341)>:
+    RSSI: 0xd8    
+
+23-12-2022  20:05:15:422
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  20:05:15:424
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  20:05:26:513
+Target ---> Host:   28 00 00 00 16 30 20 00 00 30 11 00 0D 00 00 00 00 02 00 00 00 FC 01 00 15 01 01 00 00 35 30 01 00 88 00 0F 02 00 FC AE
+{CMBS_EV_DSR_HAN_MSG_RECV(12310)}
+  <CMBS_IE_HAN_MSG(12288)>:
+    Src: (type = 0, dev_id = 13, un_id = 0)
+    Dst: (type = 0, dev_id = 0, un_id = 2)
+    Transport : 0
+    Msg Sequence : 252, Message Type : 1
+    IF Type : 0, IF Id : 0x115, IF Member : 1 
+    Data Len: 0
+    
+  <CMBS_IE_HAN_MSG_RSSI(12341)>:
+    RSSI: 0x88    
+
+23-12-2022  20:06:14:645
+Target ---> Host:   30 00 00 00 16 30 28 00 00 30 19 00 05 00 00 00 00 02 00 00 00 00 01 00 06 00 01 08 00 01 02 83 01 01 01 08 F3 35 30 01 00 D8 00 0F 02 00 32 A8
+{CMBS_EV_DSR_HAN_MSG_RECV(12310)}
+  <CMBS_IE_HAN_MSG(12288)>:
+    Src: (type = 0, dev_id = 5, un_id = 0)
+    Dst: (type = 0, dev_id = 0, un_id = 2)
+    Transport : 0
+    Msg Sequence : 0, Message Type : 1
+    IF Type : 0, IF Id : 0x6, IF Member : 1 
+    Data Len: 8
+     1     2     131     1     1     1     8     243    
+  <CMBS_IE_HAN_MSG_RSSI(12341)>:
+    RSSI: 0xd8    
+
+23-12-2022  20:06:55:443
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  20:06:55:445
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  20:07:35:465
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  20:07:35:466
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  20:08:15:486
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  20:08:15:487
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  20:08:16:007
+Target ---> Host:   30 00 00 00 16 30 28 00 00 30 19 00 05 00 00 00 00 02 00 00 00 00 01 00 06 00 01 08 00 01 02 83 01 01 01 08 F3 35 30 01 00 D8 00 0F 02 00 32 A8
+{CMBS_EV_DSR_HAN_MSG_RECV(12310)}
+  <CMBS_IE_HAN_MSG(12288)>:
+    Src: (type = 0, dev_id = 5, un_id = 0)
+    Dst: (type = 0, dev_id = 0, un_id = 2)
+    Transport : 0
+    Msg Sequence : 0, Message Type : 1
+    IF Type : 0, IF Id : 0x6, IF Member : 1 
+    Data Len: 8
+     1     2     131     1     1     1     8     243    
+  <CMBS_IE_HAN_MSG_RSSI(12341)>:
+    RSSI: 0xd8    
+
+23-12-2022  20:08:55:507
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  20:08:55:508
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+
+23-12-2022  20:09:35:528
+Host ---> Target:  
+ {CMBS_EV_DSR_PING(207)}
+
+23-12-2022  20:09:35:529
+Target ---> Host:   0E 00 00 00 D0 00 06 00 00 0F 02 00 00 00
+{CMBS_EV_DSR_PING_RES(208)}
+

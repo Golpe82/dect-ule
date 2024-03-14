@@ -1,0 +1,57 @@
+/*
+ * Copyright (c) 2016-2018 DSP Group, Inc.
+ *
+ * SPDX-License-Identifier: MIT
+ */
+#ifndef _CMND_MSG_TAMPER_H
+#define _CMND_MSG_TAMPER_H
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+#include "TypeDefs.h"
+#include "CmndApiExported.h"
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+extern_c_begin
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+/// @brief  Create TamperAlert sent notify status packet buffer based on given parameters.
+///         The <pst_hanCmndApiMsg> will contain all CMND API message fields.
+///         Data is stored in network order.
+///
+/// @param[out]     pst_hanCmndApiMsg   - pointer to message
+/// @param[in]      pst_Tamper          - pointer to IeTamperAlert structure
+///
+/// @note   If response is needed then add CMND_IE_RESPONSE_REQUIRED with using
+///         #p_CmndCreator_AddResponseRequiredIe.
+///
+/// @return     true when success
+//////////////////////////////////////////////////////////////////////////
+bool p_CmndMsg_TamperAlert_CreateSendNotifyStatusReq( OUT t_st_hanCmndApiMsg* pst_hanCmndApiMsg, u8 u8_UnitId, const t_st_hanCmndIeTamperAlert* pst_Tamper );
+
+
+//////////////////////////////////////////////////////////////////////////
+/// @brief  Create TamperAlert send notify status response packet buffer based on given parameters.
+///         The <pst_hanCmndApiMsg> will contain all CMND API message fields.
+///         Data is stored in network order.
+///
+/// @param[out]     pst_hanCmndApiMsg   - pointer to message
+/// @param[in]      u8_UnitId           - unit ID
+/// @param[in]      pst_Response        - pointer to IeResponse
+///
+/// @return     true when success
+//////////////////////////////////////////////////////////////////////////
+bool p_CmndMsg_TamperAlert_CreateSendNotifyStatusRes( OUT t_st_hanCmndApiMsg* pst_hanCmndApiMsg, u8 u8_UnitId, const t_st_hanCmndIeResponse* pst_Response );
+
+extern_c_end
+
+#endif  //_CMND_MSG_TAMPER_H

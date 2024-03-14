@@ -1,0 +1,66 @@
+{% include 'header.tpl' %}
+{% set header = data[0] %}
+{% set list_tuple = data[1] %}
+<div style="margin:3em;text-align:center">
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4">
+        <h1 class="display-4">Attribute(s)</h1>
+        <p class="lead">{{ _('Status from') }} Interface {{header['InterfaceName']}} {{ header['DeviceID']}}:{{ header['UnitID']}}</p>
+    </div>
+
+<div style="margin:1em;text-align:center">
+    <form autocomplete="on" method="POST" >
+        {% for i in list_tuple %}
+        <div class="container" style="width: 100%; text-align: center">
+        
+            <div class="form-group" style="padding-right: 0px; padding-left: 0px; text-align: justify;">
+                <div class=" d-flex justify-content-start"  margin-top: 0px; margin-bottom: 10px; >
+
+                {%if i|length == 1 %}
+                    {# we have a field #}
+                    {% set attr_id = i[0][0] %}
+                    {% set label = i[0][1] %}
+                    {% set value = i[0][5] %}
+                    <span class="input-group-addon" style="float: left; width: 80%;">
+                        <strong>{{label}}</strong>
+                    </span>
+                
+                    <span class=" d-flex justify-content-end" style="font-size: 11px; float: left; height: 95%; width: 20%;">
+                        <input class="form-control" type="text" name="val{{loop.index0}}" id="copyTarget{{loop.index0}}" value="{{value}}" placeholder="0">
+                    </span >
+                {% else %}
+                    {# we have a options list #}
+                    <span class="input-group-addon" style="float: left; width: 100%;">
+                
+                    <select class="form-select" aria-label="options select" name="val{{loop.index0}}" id="copyTarget{{loop.index0}}">
+                    {% for o in i %}
+                        {% set attr_id = o[0] %}
+                        {% set label = o[1] %}
+                        {% set value = o[5] %}
+                        {% set option_value = o[6] %}
+                        {%if value == option_value %}
+                            <option selected value="{{option_value}}">{{label}}</option>
+                        {% else %}    
+                            <option value="{{option_value}}">{{label}}</option>
+                         {% endif %}
+                    {% endfor %}    
+                    </select>
+                    </span >     
+                {% endif %}
+                </div>  
+            </div>
+        </div>
+        {% endfor %}
+
+ 
+        {# <button type="submit" class="btn btn-primary" >Submit</button> #}
+    </form>
+</div>
+   
+<a href="{{ header['BackUrl']}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Back to Commands</a>
+
+</div>
+ 
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+= Changelog
+
+== v1.0
+
+=== Added
+- GettingStarted document
+- device: uleasy version 0.6
+- device: example for Alert
+- device: example for RawData
+- device: example for VoiceCall
+- device: CmndApiUartSimulator v2.x Build 38
+- device: STLink-v2 driver v1.0
+- base: hanclient python module
+- base: ule-hub python demo application
+- base: DSPG Test Application v1.4 Build 41036
+- fwtool v0.1 for configuring CMBS/CMND device firmware

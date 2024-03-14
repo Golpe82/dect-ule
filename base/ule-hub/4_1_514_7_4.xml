@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SnomIPPhoneInput>
+<Title>MoveToHueAndSaturation</Title>
+<URL>http://10.110.10.154:8881/snom_ule_cmd/snom_set_cmd_attribute_value 4 1 514 1 7 "Direction Down              = 0x02" X</URL>
+<InputItem>
+<DisplayName>Direction Down              = 0x02</DisplayName>
+<InputToken>X</InputToken>
+<DefaultValue>3</DefaultValue>
+</InputItem>
+</SnomIPPhoneInput>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SnomIPPhoneMenu>
+<Title>Set Level</Title>
+<MenuItem>
+<Name>Level</Name>
+<URL>http://10.110.10.154:8881/miniULE/7_1_513_1_0.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>back</Name>
+<URL>http://10.110.10.154:8881/miniULE/7_1_513.xml</URL>
+</MenuItem>
+</SnomIPPhoneMenu>

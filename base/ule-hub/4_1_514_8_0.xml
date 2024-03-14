@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SnomIPPhoneInput>
+<Title>MoveToXY</Title>
+<URL>http://10.110.10.154:8881/snom_ule_cmd/snom_set_cmd_attribute_value 4 1 514 1 8 "X = X/65535" X</URL>
+<InputItem>
+<DisplayName>X = X/65535</DisplayName>
+<InputToken>X</InputToken>
+<DefaultValue>0</DefaultValue>
+</InputItem>
+</SnomIPPhoneInput>

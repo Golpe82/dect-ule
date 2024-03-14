@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SnomIPPhoneMenu>
+<Title>Blind:1</Title>
+<MenuItem>
+<Name>Level Control</Name>
+<URL>http://10.110.10.154:8881/miniULE/7_1_513.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>OpenClose</Name>
+<URL>http://10.110.10.154:8881/miniULE/7_1_516.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>OpenClose Device Configuration</Name>
+<URL>http://10.110.10.154:8881/miniULE/7_1_517.xml</URL>
+</MenuItem>
+<MenuItem>
+<Name>back</Name>
+<URL>http://10.110.10.154:8881/miniULE/ULE_devices.xml</URL>
+</MenuItem>
+</SnomIPPhoneMenu>

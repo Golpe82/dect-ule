@@ -1,0 +1,58 @@
+{% include 'header.tpl' %}
+{# {{data}} #}
+{% set header = data[0] %}
+{% set list_tuple = data[1] %}
+{# {{list_tuple}} #}
+
+<div style="margin:1em;text-align:center">
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4">
+    <h1 class="display-4">{{ header['MenuName']}}</h1>
+    <p class="lead">{{ _('Select your device') }}</p>
+</div>
+
+
+<div style="margin:5px;text-align:center">
+
+    {% for i in list_tuple %}
+        {% set profile = i[0] %}
+        {% set devnumber = i[1] %}
+        {% set description = i[2] %}
+        {% set url = i[3] %}
+        {% if url == 'NOINTERFACE' %}
+          {% set buttonactive = 'disabled' %}
+        {% else %}
+          {% set buttonactive = '' %} 
+        {% endif %}
+
+        <div class="container" style="width: 100%; text-align: left">
+        <div>
+            <a  {{buttonactive}} href="{{url}}" class="btn btn-primary btn-xlarge btn-block" id="load{{loop.index0}}"
+                data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Sending...">
+                <span style="float:left;" class="badge">No:{{devnumber}}</span>
+                &nbsp;{{description}}
+                <span style="float:right;" class="bi-nintendo-switch"></span>
+            </a>
+        </div>
+        <div>
+            <h4 class="badge" style="margin-top: 0; margin-bottom: 10;">{{profile}}</h4>
+        </div>
+        </div>
+    {% endfor %}
+</div>
+
+</div>
+
+<script>
+    $('.btn').on('click', function () {
+        var $this = $(this);
+        $this.button('loading');
+        setTimeout(function () {
+            $this.button('reset');
+        }, 2000);
+    });
+</script>
+
+</body>
+
+</html>
